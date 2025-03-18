@@ -1,3 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
 :root {
     /* color palette for webpage */
     --primary-color: #62929e;
@@ -106,279 +112,260 @@
     }
   }
   
-  /* Header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    overflow: hidden;
-    padding: 20px 30px;
-    font-family: var(--font-heading);
-  }
   
-  .siteName a {
-    font-size: 2.5em;
-    font-weight: 800;
-    color: var(--primary-color);
-    text-decoration: none;
-  }
-  
-  .siteName a:hover {
-    color: var(--secondary-color);
-  }
-  
-  #tools a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    margin: 0 10px;
-  }
-  
-  #tools a:hover {
-    color: var(--tertiary-color);
-  }
-  
-  /*navigation*/
-  nav {
-    font-family: var(--font-heading);
-    background-color: var(--tertiary-color);
-    color: white;
-    padding: 10px 0;
-    width: 100%;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li a {
-    color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  nav li a:hover {
-    color: var(--accent-color);
-    cursor: pointer;
-  }
-  
-  /* Footer */
-  footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    padding: 10px;
-    width: 100%;
-  }
-  
-  .copyright {
-    color: var(--tertiary-color);
-    font-size: 0.8em;
-  }
-  
-  footer a {
-    color: var(--primary-color);
-    font-size: 0.8em;
-  }
-  
-  footer a:hover {
-    color: var(--secondary-color);
-  }
-  
-  /* Main content */
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .page-container {
-    background-color: var(--background);
-    padding: 20px;
-  }
-  
-  /*Hero cont*/
-  .hero-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto;
-  }
-  
-  .hero-container h1 {
-    grid-column: 1 / -1; /* Changed to span all 12 columns */
-    grid-row: 1;
-    margin-bottom: 10px;
-  }
-  
-  .hero-container picture {
-    grid-column: 4 / 11;
-    grid-row: 2;
-    flex-shrink: 0;
-  }
-  
+/******* Header ***************/
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background);
+  overflow: hidden;
+  padding: 20px 30px;
+  font-family: var(--font-heading);
+}
+.siteName a {
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.siteName a:hover {
+  color: var(--secondary-color);
+}
+#tools a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  margin: 0 10px;
+}
+#tools a:hover {
+  color: var(--tertiary-color);
+}
+
+/******* Navigation ***************/
+nav {
+  font-family: var(--font-heading);
+  background-color: var(--tertiary-color);
+  color: white;
+  padding: 10px 0;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+/******* Footer ***************/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10px;
+  width: 100%;
+}
+.copyright {
+  color: var(--tertiary-color);
+  font-size: 0.8em;
+}
+footer a {
+  color: var(--primary-color);
+  font-size: 0.8em;
+}
+footer a:hover {
+  color: var(--secondary-color);
+}
+
+/******* Main Content ***************/
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.page-container {
+  background-color: var(--background);
+  padding: 20px;
+}
+
+/******* Hero Container Content ***************/
+
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto;
+}
+
+.hero-container h1 {
+  grid-column: 1/13;
+  grid-row: 1;
+  margin-bottom: 10px;
+}
+
+.hero-container picture {
+  grid-column: 4/11;
+  grid-row: 2;
+  flex-shrink: 0;
+}
+
+.hero-container picture img {
+  width: 100%;
+  height: auto;
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 1024px) {
   .hero-container picture img {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Media Query for Larger Screens */
-  @media (min-width: 1024px) {
-    .hero-container picture img {
       width: 100%;
       height: auto;
-    }
   }
-  
-  /* article in image style*/
+}
+
+/* Styling for the article content over the image */
+.hero-container article {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/6;
+  grid-row: 2;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 5px;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.hero-container article h2 {
+  font-size: 1.5em;
+  color: var(--primary-color);
+  margin: 0 0 10px;
+}
+
+.hero-container article ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 1024px) {
   .hero-container article {
-    display: flex;
-    flex-direction: column;
-    grid-column: 1 / 13; /* Changed to span all 12 columns initially */
-    grid-row: 3; /* Moved article below the image on smaller screens */
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border-radius: 5px;
-    max-width: 100%; /* Adjusted max-width for smaller screens */
-    margin-top: 20px; /* Added some space above the article */
+      grid-column: 2/6;
   }
-  
   .hero-container article h2 {
-    font-size: 1.5em;
-    color: var(--primary-color);
-    margin: 0 0 10px;
-  }
-  
-  .hero-container article ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    color: var(--primary-color);
-    font-size: 1em;
-    font-weight: 600;
-  }
-  
-  /* Media Query for Larger Screens */
-  @media (min-width: 1024px) {
-    .hero-container article {
-      grid-column: 2 / 6;
-      grid-row: 2; /* Position article beside the image on larger screens */
-      max-width: 300px;
-      margin-top: 0; /* Remove top margin on larger screens */
-    }
-  
-    .hero-container article h2 {
       font-size: 2em;
-    }
-  
-    .hero-container article ul {
+  }
+  .hero-container article ul {
       font-size: 1.2em;
-    }
   }
-  
-  .hero-container article ul li {
-    margin-bottom: 5px;
-  }
-  
-  .hero-container article .img-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .hero-container article img {
-    width: 140px;
-    height: auto;
-    cursor: pointer;
-  }
-  
-  /* Grid Areas */
-  .upgrades {
-    grid-area: upgrades;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* More responsive grid */
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .reviews {
-    grid-area: reviews;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Info Container */
-  .info-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
+}
+
+.hero-container article ul li {
+  margin-bottom: 5px;
+}
+.hero-container article .img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-container article img {
+  width: 140px;
+  height: auto;
+  cursor: pointer;
+}
+
+/******* Info Container Content ***************/
+/* Grid Areas */
+.upgrades {
+  grid-area: upgrades;
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.reviews {
+  grid-area: reviews;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Info Container */
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
       'reviews'
       'upgrades';
-    column-gap: 10px;
-    margin-top: 20px; /* Added some space above the info container */
-  }
-  
-  .info-container h2 {
-    text-align: center;
-    margin: 5px 0;
-  }
-  
-  /* Media Query for Larger Screens */
-  @media (min-width: 1024px) {
-    .info-container {
+  column-gap: 10px;
+}
+
+.info-container h2 {
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 1024px) {
+  .info-container {
       grid-template-columns: 1fr 1fr;
       grid-template-areas: 'upgrades reviews';
-    }
   }
-  
-  /* Reviews Styles */
-  .reviews ul {
-    line-height: 2;
-    font-weight: 600;
-    margin: 0 auto;
-    padding-left: 20px; /* Add some indentation for the list */
-  }
-  
-  /* Upgrades Styles */
-  .upgrades h2 {
-    grid-column: 1 / -1; /* Span all columns */
-    text-align: center;
-  }
-  
-  .upgrades-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Center text within the item */
-  }
-  
-  .upgrades-item .box {
-    display: flex;
-    background-color: var(--primary-color);
-    justify-content: center;
-    align-items: center;
-    width: 150px; /* Adjusted width for responsiveness */
-    height: 100px; /* Adjusted height */
-    margin-bottom: 10px; /* Add some space below the box */
-  }
-  
-  .upgrades-item .box img {
-    width: 50px; /* Adjusted image size */
-    height: auto;
-  }
-  
-  .upgrades-item a {
-    color: var(--primary-color);
-    font-size: 0.9em; /* Slightly adjusted font size */
-    text-decoration: none; /* Added to remove default link underline */
-  }
-  
-  .upgrades-item a:hover {
-    text-decoration: underline; 
-  }
-  
+}
+
+/* Reviews Styles */
+.reviews ul {
+  line-height: 2;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+/* Upgrades Styles */
+.upgrades h2 {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.upgrades-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upgrades-item .box {
+  display: flex;
+  background-color: var(--primary-color);
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 120px;
+}
+
+.upgrades-item .box img {
+  width: 60px;
+  height: auto;
+}
+
+.upgrades-item a {
+  color: var(--primary-color);
+  font-size: 0.8em;
+}
