@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
+// const path = require('path'); // You can remove this line
 
-// Serve static files from the 'public' directory in the project root
-router.use(express.static(path.join(__dirname, '../public')));
+// Remove this line:
+// router.use(express.static(path.join(__dirname, '../public')));
 
 module.exports = router;
-
-

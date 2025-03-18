@@ -23,7 +23,14 @@ app.use(express.static(path.join(__dirname, "public"))); // Add this line
 /* ***********************
  * Routes
  *************************/
-app.use(static);
+//app.use(static); //Move this line.
+
+//index route
+app.get("/", (req, res) => {
+  res.render("index", { title: "Home" });
+});
+
+app.use(static); //Place the static route at the end.
 
 /* ***********************
  * Local Server Information
@@ -39,24 +46,4 @@ const host = process.env.HOST;
 // Option 1: Listen on all IPv4 interfaces (recommended)
 app.listen(port, '0.0.0.0', () => {
   console.log(`app listening on http://0.0.0.0:${port}`);
-});
-
-// Option 2: Listen on the local loopback (IPv4)
-// app.listen(port, '127.0.0.1', () => {
-//   console.log(`app listening on http://127.0.0.1:${port}`);
-// });
-
-//Option 3: Listen on all IPv6 interfaces.
-//app.listen(port, '::', () => {
-// console.log(`app listening on http://[::]:${port}`);
-//});
-
-//Option 4: listen on the IPv6 loopback address.
-//app.listen(port, '::1', () => {
-// console.log(`app listening on http://[::1]:${port}`);
-//});
-
-//index route
-app.get("/", (req, res) => {
-  res.render("index", { title: "Home" });
 });
