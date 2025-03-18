@@ -9,10 +9,16 @@ const expressLayouts = require("express-ejs-layouts");
 const env = require("dotenv").config();
 const app = express();
 const static = require("./routes/static");
+const path = require("path"); // Add this line
 
 app.set("view engine", "ejs");
 app.use(expressLayouts);
 app.set("layout", "./layouts/layout"); // not at views root
+
+/* ***********************
+ * Static Middleware
+ *************************/
+app.use(express.static(path.join(__dirname, "public"))); // Add this line
 
 /* ***********************
  * Routes
