@@ -6,14 +6,14 @@
 
 :root {
     /* color palette for webpage */
-    --primary-color: #62929e;
+    --primary-color: #65a5b5;
     --secondary-color: #133a7c;
-    --tertiary-color: #565f63;
+    --tertiary-color: #4f6067;
     --accent-color: #93efea;
     --accent-color2: #f4acb7;
-    --light-grey: #f3f3f3;
-    --medium-grey: #90b577;
-    --dark-grey: #242021;
+    --light-grey: #dacece;
+    --medium-grey: #9daa95;
+    --dark-grey: #554f50;
     --background: #ffffff;
   
     /* font styles for webpage */
@@ -22,8 +22,8 @@
   
     /* sizes */
     --font-base: 20px;
-    --small-font: 0.8em;
-    --large-font: 1.2em;
+    --small-font: 0.9em;
+    --large-font: 1.3em;
   }
   
     /* Global styles */
