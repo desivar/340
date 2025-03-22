@@ -369,3 +369,430 @@ main {
   color: var(--primary-color);
   font-size: 0.8em;
 }
+
+/******* Error Page Stylings ***************/
+#error-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+#error-page img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Media query for larger screens (1024px and up) */
+@media (min-width: 1024px) {
+  #error-page {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+}
+
+/********** Login Form Stylings ************/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-container,
+.registration-container,
+.management-container,
+.add-class-container,
+.edit-class-container,
+.review-container {
+  width: 100%;
+  max-width: 500px;
+  background: var(--primary-color);
+  color: white;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.management {
+  gap: 5px;
+}
+.edit-class-container h4 {
+  text-align: center;
+  background-color: var(--danger);
+  margin-top: 0;
+  padding: 10px;
+}
+
+.registration-container h2 {
+  margin: 5px 0;
+}
+
+.registration-container h3 {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.registration-container h4 {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.registration-container hr {
+  margin: 25px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-container,
+  .registration-container,
+  .management-container,
+  .add-class-container,
+  .edit-class-container,
+  .review-container {
+      padding: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .login-container,
+  .registration-container,
+  .management-container,
+  .add-class-container,
+  .edit-class-container,
+  .review-container {
+      max-width: 700px;
+  }
+}
+
+.management-container h2 {
+  margin: 0;
+}
+
+.management-container .input {
+  width: 100%;
+}
+.login-container p,
+.registration-container p,
+.management-container p,
+.add-class-container p {
+  font-size: 0.8em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.login-container ul,
+.registration-container ul,
+.management-container ul {
+  font-size: 0.8em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.management-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form-container fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input label {
+  display: block;
+  font-weight: bold;
+  color: white;
+  font-size: 0.85em;
+}
+
+.input input,
+.input textarea,
+.input select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.input input:focus,
+.input textarea:focus,
+.input select:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+form input:required,
+form textarea:required,
+form select:required {
+  border-left: 8px solid var(--danger);
+}
+
+form input:required:valid,
+form textarea:required:valid,
+form select:required:valid {
+  border-left: 8px solid var(--success);
+  background-color: var(--success-mute);
+}
+form input:required:focus,
+form textarea:required:focus,
+form select:required:focus {
+  outline: none;
+  border: 2px solid var(--accent-color);
+  border-left: 8px solid var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-color);
+}
+
+.submit-button button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submit-button button.delete {
+  background-color: var(--danger);
+}
+.submit-button button.delete:hover {
+  background-color: var(--danger-dark);
+}
+
+.submit-button button:hover {
+  background-color: var(--secondary-color);
+}
+
+a.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+a.submit-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.submit-button button:disabled {
+  background-color: var(--light-grey);
+  color: var(--dark-grey);
+  cursor: not-allowed;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-mod {
+  width: 100%;
+  padding: 4px 8px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: .8em;
+}
+
+.btn-del {
+  width: 100%;
+  padding: 4px 8px;
+  background-color: var(--danger-dark);
+  color: #fff;
+  font-size: .8em;
+}
+.btn-mod-auto {
+  width: auto;
+  padding: 4px 8px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: .8em;
+}
+
+.btn-del-auto {
+  width: auto;
+  padding: 4px 8px;
+  background-color: var(--danger-dark);
+  color: #fff;
+  font-size: .8em;
+}
+
+.btn-view-auto {
+  width: auto;
+  padding: 4px 8px;
+  background-color: var(--success);
+  color: #fff;
+  font-size: .8em;
+}
+
+.form-container h3 {
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+
+.form-container h3 a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-container h3 a:hover {
+  text-decoration: underline;
+}
+.required {
+  color: var(--danger);
+}
+
+#inventoryDisplay {
+  width: 100%;
+  background-color: var(--light-grey);
+  color: var(--secondary-color);
+}
+#inventoryDisplay th,
+#inventoryDisplay td {
+  margin: 5px 0;
+  padding: 5px 0;
+}
+
+#passWordBtn {
+  /* border: 2px solid var(--medium-grey); */
+  background-color: var(--medium-grey);
+  color: var(--dark-grey);
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 1em;
+  font-size: small;
+  width: 7em;
+  text-align: center;
+  cursor: pointer;
+}
+#passWordBtn:hover {
+  background-color: var(--dark-grey);
+  color: #fff;
+}
+#messages ul {
+  margin: 0;
+}
+
+#messages .success {
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 600;
+  background-color: var(--success-mute);
+}
+#messages .notice {
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 600;
+  background-color: var(--danger-mute);
+}
+.notice {
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 600;
+  background-color: var(--danger-mute);
+}
+
+.customer-reviews {
+  display: flex;
+  flex-direction: column;
+  border-top: solid 1px var(--medium-grey);
+  margin-top: 50px;
+  gap: 10px;
+}
+
+.customer-reviews h2 {
+  margin: 0;
+}
+
+.review-container h3 {
+  margin: 1px 0;
+}
+.zero-review {
+  background-color: var(--success-mute);
+  color: var(--secondary-color);
+  margin: 0;
+  padding: 10px;
+}
+.review-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 40px;
+}
+
+.review-list li::marker {
+  content: '⭐';
+  font-size: 1.2em;
+}
+
+.my-review-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+.my-review-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+.review-display p,
+.my-review-display p {
+  margin: 0;
+}
+.review-display p:first-of-type {
+  color: var(--medium-grey);
+}
+
+.review-display hr {
+  margin: 1px 0;
+  border-width: 2px;
+}
+
+@media (max-width: 1024px) {
+  .my-review-display {
+      font-size: 0.8em;
+  }
+}
+/* @media (min-width: 1024px) {
+  .my-review-display {
+      font-size: .8em;
+  }
+} */
