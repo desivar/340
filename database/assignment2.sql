@@ -5,9 +5,8 @@ VALUES ('Tony', 'Stark', 'tony@starkent.com', 'Iam1ronM@n');
 
 -- 2
 -- modify the Stark record to account_type = Admin
-UPDATE account
-SET account_type = 'Admin'
-WHERE account_id = 1;
+
+
 
 -- 3
 -- delete the Stark record
