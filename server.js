@@ -4,7 +4,7 @@ const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const env = require("dotenv").config();
 const app = express();
-const static = require("./routes/static");
+const staticRoutes = require("./routes/static"); // Corrected variable name
 const path = require("path");
 
 app.set("view engine", "ejs");
@@ -30,7 +30,7 @@ app.get("/test", (req, res) => {
     res.render("test", { message: messages() }); // Use messages() here
 });
 
-app.use(static);
+app.use(staticRoutes); // Mount the static router AFTER the main route
 
 const port = process.env.PORT;
 const host = process.env.HOST;
