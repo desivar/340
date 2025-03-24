@@ -114,7 +114,7 @@ async function updateVehicle(
 }
 
 /* ***************************
- *  DELETE vehicle
+ *  DELETE 
  * ************************** */
 async function deleteVehicle(inv_id) {
   try {
